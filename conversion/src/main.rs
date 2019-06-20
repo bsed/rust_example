@@ -1,4 +1,5 @@
 use std::convert::From;
+use std::string::ToString;
 
 #[derive(Debug)]
 struct Number {
@@ -11,6 +12,15 @@ impl From<i32> for Number {
     }
 }
 
+struct Circle {
+    radius: i32
+}
+
+impl ToString for Circle {
+    fn to_string(&self) -> String {
+        format!("Circle of radius {:?}", self.radius)
+    }
+}
 
 fn main() {
     let num = Number::from(30);
@@ -20,4 +30,7 @@ fn main() {
 
     let num: Number = int.into();
     println!("My number is {:?}", num);
+
+    let circle = Circle { radius: 6};
+    print!("{}", circle.to_string());
 }
