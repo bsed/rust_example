@@ -1,0 +1,7 @@
+[package]
+name = "conversion"
+version = "0.1.0"
+authors = ["bsed <me@gnux.cn>"]
+edition = "2018"
+
+[dependencies]
