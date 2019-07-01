@@ -1,6 +1,7 @@
 use std::num::ParseIntError;
 
 
+type AliasedResult<T> = Result<T, ParseIntError>;
 
 fn multiply2(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
     let first_number = match first_number_str.parse::<i32>() {
@@ -29,6 +30,41 @@ fn multiply3(first_number_str: &str, second_number_str: &str) -> Result<i32, Par
     let second_number = second_number_str.parse::<i32>()?;
     Ok(first_number * second_number)
 }
+
+// fn multiply4(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
+//     let first_number = try!(first_number_str.parse::<i32>());
+//     let second_number = try!(second_number_str.parse::<i32>());
+
+//     Ok(first_number * second_number)
+// }
+
+fn multiply5(first_number_str: &str, second_number_str: &str) -> AliasedResult<i32> {
+    first_number_str.parse::<i32>().and_then(|first_number| {
+        second_number_str.parse::<i32>().map(|second_number| first_number * second_number) 
+    })
+}
+
+fn print5(result: AliasedResult<i32>) {
+    match result {
+        Ok(n)  => println!("n is {}", n),
+        Err(e) => println!("Error: {}", e),
+    }
+}
+
+fn multiply6(first_number_str: &str, second_number_str: &str) ->Result<i32, ParseIntError> {
+    match first_number_str.parse::<i32>() {
+        Ok(first_number) => {
+            match second_number_str.parse::<i32>() {
+                Ok(second_number) => {
+                    Ok(first_number * second_number)
+                },
+                Err(e) => Err(e),
+            }
+        },
+        Err(e) => Err(e),
+    }
+}
+
 
 fn multiply(first_number_str: &str, second_number_str: &str) -> i32 {
     let first_number = first_number_str.parse::<i32>().unwrap();
@@ -128,4 +164,18 @@ fn main() {
 
     print(multiply3("10", "2"));
     print(multiply3("t", "2"));
+
+    // print(multiply4("10", "2"));
+    // print(multiply4("t", "2"));
+
+    print5(multiply5("10", "2"));
+    print5(multiply5("t", "2"));
+
+    //let i: () = "t".parse::<i32>();
+
+    let twenty6 = multiply6("20", "2");
+    print(twenty6);
+
+    let tt = multiply6("t", "2");
+    print(tt);
 }
