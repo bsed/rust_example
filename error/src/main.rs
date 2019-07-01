@@ -73,4 +73,19 @@ fn main() {
         .filter_map(Result::ok)
         .collect();
     println!("Results: {:?}", possible_numbers);
+
+    let strings2 = vec!["tofu", "93", "18"];
+    let numbers: Result<Vec<_>, _> = strings2
+        .into_iter()
+        .map(|s| s.parse::<i32>())
+        .collect();
+    println!("Results: {:?}", numbers);
+
+    let strings3 = vec!["tofu", "93", "18"];
+    let (numbers, errors): (Vec<_>, Vec<_>) = strings3
+        .into_iter()
+        .map(|s| s.parse::<i32>())
+        .partition(Result::is_ok);
+    println!("Numbers: {:?}", numbers);
+    println!("Errors: {:?}", errors);
 }
