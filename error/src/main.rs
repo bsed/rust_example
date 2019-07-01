@@ -1,5 +1,7 @@
 use std::num::ParseIntError;
 
+
+
 fn multiply2(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
     let first_number = match first_number_str.parse::<i32>() {
         Ok(first_number)  => first_number,
@@ -19,6 +21,13 @@ fn print(result: Result<i32, ParseIntError>) {
         Ok(n)  => println!("n is {}", n),
         Err(e) => println!("Error: {}", e),
     }
+}
+
+
+fn multiply3(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
+    let first_number = first_number_str.parse::<i32>()?;
+    let second_number = second_number_str.parse::<i32>()?;
+    Ok(first_number * second_number)
 }
 
 fn multiply(first_number_str: &str, second_number_str: &str) -> i32 {
@@ -116,4 +125,7 @@ fn main() {
 
     print(multiply2("10", "2"));
     print(multiply2("t", "2"));
+
+    print(multiply3("10", "2"));
+    print(multiply3("t", "2"));
 }
