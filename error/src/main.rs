@@ -1,6 +1,44 @@
 use std::num::ParseIntError;
 
 
+#[derive(Debug)] enum Food { CordonBleu, Steak, Sushi }
+#[derive(Debug)] enum Day { Monday, Tuesday, Wednesday }
+
+fn have_ingredients(food: Food) -> Option<Food> {
+    match food {
+        Food::Sushi => None,
+        _           => Some(food),
+    }
+}
+
+fn have_recipe(food: Food) -> Option<Food> {
+    match food {
+        Food::CordonBleu => None,
+        _               => Some(food),
+    }
+}
+
+fn cookable_v1(food: Food) -> Option<Food> {
+    match have_ingredients(food) {
+        None        => None,
+        Some(food)  => match have_recipe(food) {
+            None        => None,
+            Some(food)  => Some(food),
+        }
+    }
+}
+
+fn cookable_v2(food: Food) -> Option<Food> {
+    have_ingredients(food).and_then(have_recipe)
+}
+
+fn eat(food: Food, day: Day) {
+    match cookable_v2(food) {
+        Some(food) => println!("Yay! On {:?} we get to eat {:?}.", day, food),
+        None       => println!("Oh no. We don't get to eat on {:?}?", day),
+    }
+}
+
 type AliasedResult<T> = Result<T, ParseIntError>;
 
 fn multiply2(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
@@ -65,6 +103,12 @@ fn multiply6(first_number_str: &str, second_number_str: &str) ->Result<i32, Pars
     }
 }
 
+
+fn multiply7(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
+    first_number_str.parse::<i32>().and_then(|first_number| {
+        second_number_str.parse::<i32>().map(|second_number| first_number * second_number)
+    })
+}
 
 fn multiply(first_number_str: &str, second_number_str: &str) -> i32 {
     let first_number = first_number_str.parse::<i32>().unwrap();
@@ -178,4 +222,16 @@ fn main() {
 
     let tt = multiply6("t", "2");
     print(tt);
+
+    let twenty7 = multiply7("30", "2");
+    print(twenty7);
+
+    let tt7 = multiply7("t", "2");
+    print(tt7);
+
+    let (cordon_bleu, steak, sushi) = (Food::CordonBleu, Food::Steak, Food::Sushi);
+
+    eat(cordon_bleu, Day::Monday);
+    eat(steak, Day::Tuesday);
+    eat(sushi, Day::Wednesday);
 }
