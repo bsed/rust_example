@@ -21,10 +21,17 @@ fn give_commoner(gift: Option<&str>){
 
 fn give_princess2(gift: Option<&str>){
     let inside = gift.unwrap();
-    if inside == "snake" { panic!("AAAaaaaa!!!!"); }
+    if inside == "snake" { panic!("AA2Aaaaaa!!!!"); }
     println!("I love {}s!!!!!", inside);
 
 }
+
+
+fn double_first(vec: Vec<&str>) -> i32 {
+    let first = vec.first().unwrap(); // 生成错误 1
+    2 * first.parse::<i32>().unwrap() // 生成错误 2
+}
+
 
 fn main() {
     println!("Hello, world!");
@@ -35,7 +42,7 @@ fn main() {
     // println!("double is {}", tt);
 
     give_princess("teddy bear");
-    give_princess("snake");
+    give_princess("snake1");
 
     let food = Some("chicken");
     let snake = Some("snake");
@@ -46,8 +53,24 @@ fn main() {
     give_commoner(void);
 
      let bird = Some("robin");
-    let nothing = None;
+    //let nothing = None;
 
     give_princess2(bird);
-    give_princess2(nothing);
+    //give_princess2(nothing);
+
+    let numbers = vec!["42", "93", "18"];
+    //let empty = vec![];
+    let strings = vec!["tofu", "93", "18"];
+    println!("The first doubled is {}", double_first(numbers));
+    //println!("The first doubled is {}", double_first(empty));
+    // 错误1：输入 vector 为空
+    //println!("The first doubled is {}", double_first(strings));
+    // 错误2：此元素不能解析成数字
+
+    let possible_numbers: Vec<_> = strings
+        .into_iter()
+        .map(|s| s.parse::<i32>())
+        .filter_map(Result::ok)
+        .collect();
+    println!("Results: {:?}", possible_numbers);
 }
