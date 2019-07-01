@@ -39,6 +39,47 @@ fn eat(food: Food, day: Day) {
     }
 }
 
+#[derive(Debug)] enum Food2 { Apple, Carrot, Potato }
+
+#[derive(Debug)] struct Peeled(Food2);
+#[derive(Debug)] struct Chopped(Food2);
+#[derive(Debug)] struct Cooked(Food2);
+
+fn peel(food: Option<Food2>) -> Option<Peeled> {
+    match food {
+        Some(food) => Some(Peeled(food)),
+        None       => None,
+    }
+}
+
+// 切食物。如果没有食物，就返回 `None`。否则返回切好的食物。
+fn chop(peeled: Option<Peeled>) -> Option<Chopped> {
+    match peeled {
+        Some(Peeled(food)) => Some(Chopped(food)),
+        None               => None,
+    }
+}
+
+// 烹饪食物。这里，我们使用 `map()` 来替代 `match` 以处理各种情况。
+fn cook(chopped: Option<Chopped>) -> Option<Cooked> {
+    chopped.map(|Chopped(food)| Cooked(food))
+}
+
+// 这个函数会完成削皮切块烹饪一条龙。我们把 `map()` 串起来，以简化代码。
+fn process(food: Option<Food2>) -> Option<Cooked> {
+    food.map(|f| Peeled(f))
+        .map(|Peeled(f)| Chopped(f))
+        .map(|Chopped(f)| Cooked(f))
+}
+
+// 在尝试吃食物之前确认食物是否存在是非常重要的！
+fn eat2(food: Option<Cooked>) {
+    match food {
+        Some(food) => println!("Mmm. I love {:?}", food),
+        None       => println!("Oh no! It wasn't edible."),
+    }
+}
+
 type AliasedResult<T> = Result<T, ParseIntError>;
 
 fn multiply2(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
@@ -234,4 +275,18 @@ fn main() {
     eat(cordon_bleu, Day::Monday);
     eat(steak, Day::Tuesday);
     eat(sushi, Day::Wednesday);
+
+    let apple = Some(Food2::Apple);
+    let carrot = Some(Food2::Carrot);
+    let potato = None;
+
+    let cooked_apple = cook(chop(peel(apple)));
+    let cooked_carrot = cook(chop(peel(carrot)));
+
+    // 现在让我们试试看起来更简单的 `process()`。
+    let cooked_potato = process(potato);
+
+    eat2(cooked_apple);
+    eat2(cooked_carrot);
+    eat2(cooked_potato);
 }
