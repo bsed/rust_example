@@ -1,3 +1,25 @@
+use std::num::ParseIntError;
+
+fn multiply2(first_number_str: &str, second_number_str: &str) -> Result<i32, ParseIntError> {
+    let first_number = match first_number_str.parse::<i32>() {
+        Ok(first_number)  => first_number,
+        Err(e) => return Err(e),
+    };
+
+    let second_number = match second_number_str.parse::<i32>() {
+        Ok(second_number)  => second_number,
+        Err(e) => return Err(e),
+    };
+
+    Ok(first_number * second_number)
+}
+
+fn print(result: Result<i32, ParseIntError>) {
+    match result {
+        Ok(n)  => println!("n is {}", n),
+        Err(e) => println!("Error: {}", e),
+    }
+}
 
 fn multiply(first_number_str: &str, second_number_str: &str) -> i32 {
     let first_number = first_number_str.parse::<i32>().unwrap();
@@ -91,4 +113,7 @@ fn main() {
     let errors: Vec<_> = errors.into_iter().map(Result::unwrap_err).collect();
     println!("Numbers: {:?}", numbers);
     println!("Errors: {:?}", errors);
+
+    print(multiply2("10", "2"));
+    print(multiply2("t", "2"));
 }
