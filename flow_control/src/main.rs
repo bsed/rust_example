@@ -215,4 +215,13 @@ fn main() {
         n @ 13 ... 19 => println!("I'm a teen of age {:?}", n),
         n => println!("I'm an old person of age {:?}", n),
     }
+
+    let pair10 = (2, -2);
+    println!("Tell me about {:? }", pair10);
+    match pair10 {
+        (x, y) if x == y => println!("These are twins"),
+         (x, y) if x + y == 0 => println!("Antimatter, kaboom!"),
+        (x, _) if x % 2 == 1 => println!("The first one is odd"),
+        _ => println!("No correlation..."),
+    }
 }
