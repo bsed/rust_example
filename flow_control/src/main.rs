@@ -117,4 +117,23 @@ fn main() {
             break;
         }
     }
+
+    let number4 = 13;
+    println!("Tell me about {}", number4);
+
+    match number4 {
+        1 => println!("One!"),
+        2 | 3 | 5 | 7 | 11 => println!("this is a prime"),
+        13...19 => println!("a teen"),
+        _ => println!("Ain't special"),
+    }
+
+    let boolean4 = true;
+    // match 也是一个表达式
+    let binary4 = match boolean4 {
+        false => 0,
+        true => 1,
+    };
+
+    println!("{} -> {}", boolean4, binary4);
 }
