@@ -176,7 +176,7 @@ fn main() {
         }
         else {
             println!("`i` is `{:?}`. Try again.", i);
-            optional = Some(i + 1);
+            optional7 = Some(i + 1);
         }
     }
 }
