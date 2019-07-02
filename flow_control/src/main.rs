@@ -167,4 +167,16 @@ fn main() {
             _ => {break;}
         }
     }
+    
+    let mut optional7 = Some(0);
+    while let Some(i) = optional7 {
+        if i > 9 {
+            println!("Greater that 9, quit!");
+            optional7 = None;
+        }
+        else {
+            println!("`i` is `{:?}`. Try again.", i);
+            optional = Some(i + 1);
+        }
+    }
 }
