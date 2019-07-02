@@ -151,4 +151,20 @@ fn main() {
 
         n5 += 1;
     }
+
+    let mut optional6 = Some(0);
+    loop {
+        match optional6 {
+            Some(i) => {
+                if i > 9 {
+                    println!("Greater than 9, quit!");
+                    optional6 = None;
+                } else {
+                    println!("`i` is `{:?}`. Try again. ", i);
+                    optional6 = Some(i + 1);
+                }
+            },
+            _ => {break;}
+        }
+    }
 }
