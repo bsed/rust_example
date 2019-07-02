@@ -3,6 +3,10 @@ enum Foo {
     Baz,
     Qux(u32)
 }
+
+fn age() -> i32 {
+    15
+}
 fn main() {
     println!("Hello, world!");
 
@@ -178,5 +182,37 @@ fn main() {
             println!("`i` is `{:?}`. Try again.", i);
             optional7 = Some(i + 1);
         }
+    }
+
+    'outer: loop {
+        println!("Entered the outer loop");
+        'inner: loop {
+            println!("Entered the inner loop");
+            // 这只是中断内部的循环
+            //break;
+
+            // 这会中断外层循环
+            break 'outer;
+        }
+        println!("this point will never be reached");
+    }
+    println!("Exited the outer loop");
+
+    let mut counter9 = 0;
+    let result9 = loop {
+        counter9 += 1;
+        if counter9 == 10 {
+            break counter9 * 2;
+        }
+    };
+
+    assert_eq!(result9, 20);
+
+    println!("Tell me type of person you are");
+    match age() {
+        0 => println!("I'm not born yet I guess"),
+        n @ 1 ... 12 => println!("I'm a child of age {:?}", n),
+        n @ 13 ... 19 => println!("I'm a teen of age {:?}", n),
+        n => println!("I'm an old person of age {:?}", n),
     }
 }
