@@ -51,6 +51,11 @@ impl Pair {
     }
 }
 
+fn is_odd2(n: u32) -> bool {
+    n % 2 == 1
+}
+
+
 fn main(){
     let rectangle = Rectangle {
         p1: Point::origin(),
@@ -69,4 +74,25 @@ fn main(){
 
      let pair = Pair (Box::new(1), Box::new(2));
      pair.destory();
+
+    println!("Find the sum of all the squared odd numbers under 1000");
+    let upper2 = 1000;
+
+    let mut acc2 = 0;
+    for n2 in 0.. {
+        let n_squared = n2 * n2;
+        if n_squared >= upper2 {
+            break;
+        }else if is_odd2(n_squared){
+            acc2 += n_squared;
+        }
+    }
+    println!("imperative style: {}", acc2);
+
+    let sum_of_squared_odd_numbers2: u32 =
+        (0..).map(|n| n * n)
+            .take_while(|&n| n < upper2)
+            .filter(|&n| is_odd2(n))
+            .fold(0, |sum, i| sum + i);
+    println!("functional style: {}", sum_of_squared_odd_numbers2);
 }
