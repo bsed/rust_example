@@ -88,6 +88,17 @@ fn apply_to_3<F>(f: F) -> i32 where
         f(3)
     }
 
+fn create_fn9() -> Box<dyn Fn()> {
+    let text = "Fn".to_owned();
+    Box::new(move || println!("This is a: {}", text))
+}
+
+fn create_fnmut9() -> Box<dyn FnMut()> {
+    let text = "FnMut".to_owned();
+    Box::new(move || println!("This is b: {}", text))
+}
+
+
 fn main() {
     let rectangle = Rectangle {
         p1: Point::origin(),
@@ -215,4 +226,17 @@ fn main() {
     apply8(diary8);
     let double = |x| 2*x;
     println!("3 doubled: {}", apply_to_3(double));
+
+    let fn_plain9 = create_fn9();
+    let mut fn_mut9 = create_fnmut9();
+
+    fn_plain9();
+    fn_mut9();
+
+    let vec91 = vec![1, 2, 3];
+    let vec92 = vec![4, 5, 6];
+
+    println!("2 in vec91: {}", vec91.iter().any(|&x| x == 2));
+    print!("2 in vec92: {}", vec92.into_iter().any(|x| x == 2));
+
 }
