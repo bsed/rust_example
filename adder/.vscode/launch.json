@@ -1,0 +1,104 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "gdb",
+          "request": "launch",
+          "name": "Linux Prod",
+          "preLaunchTask": "cargo test",
+          "target": "./target/debug/${workspaceFolderBasename}",
+          "cwd": "${workspaceRoot}",
+          "printCalls": false,
+            // "autorun": [
+            //     "set substitute-path /checkout %RUSTUP_HOME%/toolchains/stable-x86_64-pc-windows-gnu/lib/rustlib/src/rust"
+            // ],
+      },
+      {
+          "type": "gdb",
+          "request": "launch",
+          "name": "Linux Dev",
+          "preLaunchTask": "cargo build ws",
+          "target": "./target/debug/${workspaceFolderBasename}",
+          "cwd": "${workspaceRoot}"
+      },
+      {
+          "type": "lldb",
+          "request": "launch",
+          "name": "Linux Dev Test LLDB",
+          "program": "${workspaceRoot}/target/debug/deps/${workspaceFolderBasename}",
+          "args": [
+              "--nocapture"
+          ],
+          "cwd": "${workspaceRoot}",
+          "sourceLanguages": [
+              "rust"
+          ],
+          "preLaunchTask": "cargo build test",
+          "internalConsoleOptions": "openOnSessionStart"
+      },
+      {
+          "type": "lldb",
+          "request": "launch",
+          "name": "Linux Dev LLDB",
+          "program": "${workspaceRoot}/target/debug/${workspaceFolderBasename}",
+          "args": [],
+          "cwd": "${workspaceRoot}",
+          "sourceLanguages": [
+              "rust"
+          ],
+          "preLaunchTask": "cargo test",
+          "internalConsoleOptions": "openOnSessionStart",
+          "sourceMap": {
+              //"/rustc/08bfe16129b0621bc90184f8704523d4929695ef/src": "C:/Users/kelvin/.rustup/toolchains/nightly-x86_64-pc-windows-gnu/lib/rustlib/src/rust/src",
+              "C:/rustc/*/src/": "C:/Users/kelvin/.rustup/toolchains/stable-x86_64-pc-windows-gnu/lib/rustlib/src/rust/src"
+          },
+      },
+      {
+          "name": "Windows Prod",
+          "type": "cppvsdbg",
+          "request": "launch",
+          "program": "${workspaceFolder}/target/debug/${workspaceFolderBasename}",
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": true,
+          "logging": {
+              "moduleLoad": false
+          },
+          //"symbolSearchPath": "https://msdl.microsoft.com/download/symbols",
+          "sourceFileMap": {
+            "/rustc/*/src": "C:/Users/kelvin/.rustup/toolchains/stable-x86_64-pc-windows-gnu/lib/rustlib/src/rust/src",
+          },
+          "preLaunchTask": "cargo build",
+      },
+      {
+          "name": "Windows Dev",
+          "type": "cppvsdbg",
+          "request": "launch",
+          "preLaunchTask": "cargo build ws",
+          "program": "target/debug/${workspaceFolderBasename}",
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": true,
+          "logging": {
+              "moduleLoad": false
+          }
+      },
+      {
+        "name": "Windows Dev GDB",
+        "type": "gdb",
+        "request": "launch",
+        "preLaunchTask": "cargo test",
+        "target": "${workspaceRoot}/target/debug/${workspaceFolderBasename}",
+        "cwd": "${workspaceFolder}",
+        "stopOnEntry": true,
+        "program": "gdb.exe"
+    }
+  ]
+}

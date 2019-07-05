@@ -1,0 +1,113 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cargo test build",
+            "command": "cargo",
+            "args": [
+                "test",
+                "--no-run"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "cargo build",
+            "command": "cargo",
+            "args": [
+                "build"
+            ],
+            "problemMatcher": [
+                "$rustc",
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "cargo clean",
+            "command": "cargo",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "cargo run",
+            "command": "cargo",
+            "args": [
+                "run"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "cargo test",
+            "command": "cargo",
+            "args": [
+                "test",
+                "--no-run",
+                "--lib"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "cargo build ws",
+            "command": "cargo",
+            "args": [
+                "build",
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "cargo doc",
+            "command": "cargo doc --open",
+            "problemMatcher": [
+                "$rustc"
+            ]
+        },
+        {
+            "type": "npm",
+            "script": "release",
+            "path": "ui/",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "npm",
+            "script": "releaseall",
+            "path": "ui/",
+            "problemMatcher": []
+        }
+    ]
+}

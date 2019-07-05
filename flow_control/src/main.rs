@@ -256,4 +256,42 @@ fn main() {
             println!("Cyan: {}, magenta: {}, yellow: {}, key (black): {}!",
                 c, m, y, k),
      }
+
+    struct Foo12 {x: (u32, u32), y: u32}
+    let foo12 = Foo12 { x: (1, 2), y: 3 };
+    let Foo12 { x: (a, b), y } = foo12;
+
+    println!("a = {}, b = {},  y = {} ", a, b, y);
+
+    let Foo12 { y: i, x: j } = foo12;
+    println!("i = {:?}, j = {:?}", i, j);
+
+    // 也可以忽略某些变量
+    let Foo12 { y, .. } = foo12;
+    println!("y = {}", y);
+
+    let  reference = &4;
+    match reference {
+           &val => println!("Got a value via destructuring: {:?}", val),
+    }
+
+    match *reference {
+        val => println!("Got a value via dereferencing: {:?}", val),
+    }
+
+    let not_a_reference = 3;
+    let ref _is_a_reference = 3;
+    let value = 5;
+    let mut mut_value = 6;
+
+    match value {
+        ref r => println!("Got a reference to a value: {:?}", r),
+    }
+
+    match mut_value {
+        ref mut m => {
+            *m += 10;
+             println!("We added 10. `mut_value`: {:?}", m);
+        }
+    }
 }
