@@ -126,5 +126,17 @@ fn main(){
         acc
     }
 
-     println!("Sum of odd numbers up to 9 (excluding): {}", sum_odd_numbers3(9));
+    println!("Sum of odd numbers up to 9 (excluding): {}", sum_odd_numbers3(9));
+
+    fn function4 (i: i32) -> i32 { i + 1}
+    let closure_annotated4 = |i: i32| -> i32 { i + 1};
+    let closure_inferred4  = |i|          i + 1  ;
+
+    let i = 1;
+    println!("function4: {}", function4(i));
+    println!("closure_annotated4: {}", closure_annotated4(i));
+    println!("closure_inferred4: {}", closure_inferred4(i));
+
+    let one4 = || 1;
+    println!("closure returning one4: {}", one4());
 }
