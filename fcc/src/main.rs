@@ -1,3 +1,4 @@
+
 struct Point {
     x: f64,
     y: f64,
@@ -68,6 +69,24 @@ where
 {
     f();
 }
+
+
+fn call_me7<F: Fn()>(f: F) {
+    f()
+}
+fn function7() {
+    println!("I'm a function!");
+}
+
+fn apply8<F>(f: F) where
+    F: FnOnce() {
+        f();
+}
+
+fn apply_to_3<F>(f: F) -> i32 where
+    F: Fn(i32) -> i32 {
+        f(3)
+    }
 
 fn main() {
     let rectangle = Rectangle {
@@ -154,5 +173,46 @@ fn main() {
     let print5 = || print!("{}", x5);
     apply5(print5);
 
-    
+    let color6 = "green";
+    let print6 = || println!("`color`: {} ", color6);
+    print6();
+    print6();
+
+    let mut count6 = 0;
+    let mut inc6 = || {
+        count6 += 1;
+        println!("`count`: {}", count6);
+    };
+    inc6();
+    inc6();
+
+    //let reborrow = &mut count6;
+    let movable6 = Box::new(3);
+    let consume6 = || {
+        println!("`movable`: {:?}", movable6);
+        std::mem::drop(movable6);
+    };
+
+    consume6();
+
+    let closure7 = || println!("I'm a closure!");
+    call_me7(closure7);
+    call_me7(function7);
+
+    let greeding8 = "hello";
+    let mut farewell8 = "goodbye".to_owned();
+
+    let diary8 = || {
+        println!("I said {}.", greeding8);
+
+        farewell8.push_str("!!!");
+        println!("Then I screamed {}.", farewell8);
+        println!("Now I can sleep. zzzzz");
+
+        std::mem::drop(farewell8);
+    };
+
+    apply8(diary8);
+    let double = |x| 2*x;
+    println!("3 doubled: {}", apply_to_3(double));
 }
