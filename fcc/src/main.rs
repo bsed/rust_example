@@ -239,4 +239,16 @@ fn main() {
     println!("2 in vec91: {}", vec91.iter().any(|&x| x == 2));
     print!("2 in vec92: {}", vec92.into_iter().any(|x| x == 2));
 
+    let vec101 = vec![1, 2, 3];
+    let vec102 = vec![4, 5, 6];
+
+    let mut iter10 = vec101.iter();
+    let mut into_iter10 = vec102.into_iter();
+    println!("Find 2 in vec101: {:?}", iter10.find(|&&x| x == 2));
+    println!("Find 2 in vec102: {:?}", into_iter10.find(| &x| x == 2));
+
+    let array1 = [1, 2, 3];
+    let array2 = [4, 5, 6];
+    println!("Find 2 in arry1: {:?}", array1.iter().find(|&&x| x == 2));
+    println!("Find 2 in array2: {:?}", array2.into_iter().find(|&&x| x == 2));
 }
