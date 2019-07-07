@@ -72,6 +72,7 @@ mod my2 {
     }
 }
 
+
 fn main() {
     println!("Hello, world!");
 
@@ -92,4 +93,7 @@ fn main() {
 
         println!("Leaving block");
     }
+
+
+    function();
 }
