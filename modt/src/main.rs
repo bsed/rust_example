@@ -1,3 +1,12 @@
+use deeply::nested::function as other_function;
+
+mod deeply {
+    pub mod nested {
+        pub fn function() {
+            println!("called `deeply::nested::function()`")
+        }
+    }
+}
 mod my {
     pub struct OpenBox<T> {
         pub contents: T,
@@ -73,4 +82,14 @@ fn main() {
     //println!("The closed box contains: {}", _closed_box.contents);
 
     my2::indirect_call();
+
+    other_function();
+
+    println!("Entering block");
+    {
+        use deeply::nested::function;
+        function();
+
+        println!("Leaving block");
+    }
 }
