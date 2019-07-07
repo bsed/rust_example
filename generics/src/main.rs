@@ -113,6 +113,16 @@ struct PhantomTuple<A, B>(A, PhantomData<B>);
 #[derive(PartialEq)]
 struct PhantomStruct<A, B>{first: A, phantom: PhantomData<B> }
 
+trait PrintInOption {
+    fn print_in_option(self);
+}
+
+impl<T> PrintInOption for T where
+    Option<T>: Debug {
+        fn print_in_option(self) {
+            println!("{:?}", Some(self));
+        }
+    }
 
 fn main() {
     println!("Hello, world!");
@@ -175,4 +185,7 @@ fn main() {
     // 编译期错误！类型不匹配，所以这些值不能够比较：
     //println!("_struct1 == _struct2 yields: {}",
     //          _struct1 == _struct2);
+
+    let vec5 = vec![1, 2, 3];
+    vec5.print_in_option();
 }
