@@ -32,7 +32,7 @@ impl fmt::Debug for Complex {
     }
 }
 
-static NTHREADS: i32 = 3;
+static NTHREADS: i32 = 10;
 fn main() {
     println!("Hello, world!");
     let args: Vec<String> = env::args().collect();
@@ -86,5 +86,16 @@ fn main() {
         let s = String::from_utf8_lossy(&output.stderr);
 
         print!("rustc failed and stderr was:\n{}", s);
+    }
+
+    let mut children = vec![];
+    for i in 0..NTHREADS {
+        children.push(thread::spawn(move || {
+            println!("this is thread number {}", i);
+        }));
+    }
+
+    for child in children {
+        let _ = child.join();
     }
 }
