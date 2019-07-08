@@ -32,4 +32,9 @@ fn main() {
     println!("1000 as a u8 is : {}", 1000 as u8);
     // 232 的二进制补码是 -24
     println!(" 232 as a i8 is : {}", 232 as i8);
+
+    let elem = 5u8;
+    let mut vec = Vec::new();
+    vec.push(elem);
+    println!("{:?}", vec);
 }
