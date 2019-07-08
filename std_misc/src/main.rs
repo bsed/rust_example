@@ -1,19 +1,19 @@
 use std::env;
-use std::sync::mpsc::{Sender, Receiver};
-use std::sync::mpsc;
-use std::thread;
 use std::fmt;
 use std::path::Path;
-
+use std::process::Command;
+use std::sync::mpsc;
+use std::sync::mpsc::{Receiver, Sender};
+use std::thread;
 
 #[link(name = "m")]
-extern {
+extern "C" {
     fn csqrtf(z: Complex) -> Complex;
     fn ccosf(z: Complex) -> Complex;
 }
 
 fn cos(z: Complex) -> Complex {
-    unsafe {ccosf(z)}
+    unsafe { ccosf(z) }
 }
 
 #[repr(C)]
@@ -32,14 +32,12 @@ impl fmt::Debug for Complex {
     }
 }
 
-
-
 static NTHREADS: i32 = 3;
 fn main() {
     println!("Hello, world!");
     let args: Vec<String> = env::args().collect();
     println!("My path is {}.", args[0]);
-    println!("I got {:?} arguments: {:?}", args.len()-1, &args[1..]);
+    println!("I got {:?} arguments: {:?}", args.len() - 1, &args[1..]);
 
     let (tx, rx): (Sender<i32>, Receiver<i32>) = mpsc::channel();
     for id in 0..NTHREADS {
@@ -58,7 +56,7 @@ fn main() {
 
     println!("{:?}", ids);
 
-     let z = Complex { re: -1., im: 0. };
+    let z = Complex { re: -1., im: 0. };
 
     let z_sqrt = unsafe { csqrtf(z) };
 
@@ -67,11 +65,26 @@ fn main() {
     println!("cos({:?}) = {:?}", z, cos(z));
 
     let path = Path::new(".");
-    let display = path.display();
+    //let display = path.display();
     let new_path = path.join("a").join("b");
 
     match new_path.to_str() {
         None => panic!("new path is not a valid UTF-8 sequence"),
         Some(s) => println!("new path is {}", s),
+    }
+
+    let output = Command::new("rustc")
+        .arg("--version")
+        .output()
+        .unwrap_or_else(|e| panic!("failed to execute process: {}", e));
+
+    if output.status.success() {
+        let s = String::from_utf8_lossy(&output.stdout);
+
+        print!("rustc succeeded and stdout was:\n{}", s);
+    } else {
+        let s = String::from_utf8_lossy(&output.stderr);
+
+        print!("rustc failed and stderr was:\n{}", s);
     }
 }
