@@ -3,6 +3,8 @@ use std::sync::mpsc::{Sender, Receiver};
 use std::sync::mpsc;
 use std::thread;
 use std::fmt;
+use std::path::Path;
+
 
 #[link(name = "m")]
 extern {
@@ -30,9 +32,9 @@ impl fmt::Debug for Complex {
     }
 }
 
+
+
 static NTHREADS: i32 = 3;
-
-
 fn main() {
     println!("Hello, world!");
     let args: Vec<String> = env::args().collect();
@@ -64,4 +66,12 @@ fn main() {
 
     println!("cos({:?}) = {:?}", z, cos(z));
 
+    let path = Path::new(".");
+    let display = path.display();
+    let new_path = path.join("a").join("b");
+
+    match new_path.to_str() {
+        None => panic!("new path is not a valid UTF-8 sequence"),
+        Some(s) => println!("new path is {}", s),
+    }
 }
