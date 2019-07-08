@@ -49,6 +49,66 @@ fn try_division(dividend: i32, divisor: i32) {
     }
 }
 
+fn division2(dividend: i32, divisor: i32) -> i32 {
+    if divisor == 0 {
+        panic!("division by zero");
+    }else{
+      dividend / divisor  
+    }
+}
+
+mod checked {
+    // 我们想要捕获的数学 “错误”
+    #[derive(Debug)]
+    pub enum MathError {
+        DivisionByZero,
+        NegativeLogarithm,
+        NegativeSquareRoot,
+    }
+
+    pub type MathResult = Result<f64, MathError>;
+
+    pub fn div(x: f64, y: f64) -> MathResult {
+        if y == 0.0 {
+            // 此操作将会失败，那么（与其让程序崩溃）不如把失败的原因包装在
+            // `Err` 中并返回
+            Err(MathError::DivisionByZero)
+        } else {
+            // 此操作是有效的，返回包装在 `Ok` 中的结果
+            Ok(x / y)
+        }
+    }
+
+    pub fn sqrt(x: f64) -> MathResult {
+        if x < 0.0 {
+            Err(MathError::NegativeSquareRoot)
+        } else {
+            Ok(x.sqrt())
+        }
+    }
+
+    pub fn ln(x: f64) -> MathResult {
+        if x < 0.0 {
+            Err(MathError::NegativeLogarithm)
+        } else {
+            Ok(x.ln())
+        }
+    }
+}
+
+// `op(x, y)` === `sqrt(ln(x / y))`
+fn op(x: f64, y: f64) -> f64 {
+    match checked::div(x, y) {
+        Err(why) => panic!("{:?}", why),
+        Ok(ratio) => match checked::ln(ratio) {
+            Err(why) => panic!("{:?}", why),
+            Ok(ln) => match checked::sqrt(ln) {
+                Err(why) => panic!("{:?}", why),
+                Ok(sqrt) => sqrt,
+            },
+        },
+    }
+}
 fn main() {
     println!("Hello, world!");
 
@@ -113,4 +173,101 @@ fn main() {
     println!("{:?} unwraps to {:?}", optional_float, optional_float.unwrap());
     //println!("{:?} unwraps to {:?}", none, none.unwrap());
 
-}
+    let _x = Box::new(0i32);
+    division2(3, 1);
+    println!("This point won't be reached!");
+
+    println!("{}", op(110.0, 10.0));
+
+    let pangram: &'static str = "the quick brown fox jumps over the lazy dog";    
+    println!("Pangram: {}", pangram);
+    println!("Words in reverse");
+    for word in pangram.split_whitespace().rev() {
+        println!("> {}", word);
+    }
+
+    let mut chars: Vec<char> = pangram.chars().collect();
+    chars.sort();
+    chars.dedup();
+
+    let mut string = String::new();
+    for c in chars {
+        string.push(c);
+        string.push_str(", ");
+    }
+
+    let chars_to_trim: &[char] = &[' ', ','];
+    let trimmed_str: &str = string.trim_matches(chars_to_trim);
+    println!("Used characters: {}", trimmed_str);
+
+    let alice = String::from("I like dogs");
+    let bob: String = alice.replace("dog", "cat");
+    println!("Alice says: {}", alice);
+    println!("Bob says: {}", bob);
+
+    let byte_escape = "I'm writing \x52\x75\x73\x74!";
+    println!("What are you doing\x3F (\\x3F means ?) {}", byte_escape);
+
+    let unicode_codepoint = "\u{211D}";
+    let character_name = "\"DOUBLE-STRUCK CAPITAL R\"";
+    println!("Unicode character {} (U+211D) is called {}",
+                unicode_codepoint, character_name );
+
+    let long_string = "String literals
+                        can span multiple lines.
+                        The linebreak and indentation here ->\
+                        <- can be escaped too!";
+    println!("{}", long_string);
+
+    let raw_str = r"Escapes don't work here: \x3F \u{211D}";
+    println!("{}", raw_str);
+
+    let quotes = r#"And then I said: "There is no escape!""#;
+    println!("{}", quotes);
+
+    let longer_delimiter = r###"A string with "# in it. And even "##!"###;
+    println!("{}", longer_delimiter);
+
+    let bytestring: &[u8; 20] = b"this is a bytestring";
+    println!("A bytestring: {:?}", bytestring);
+
+     let escaped = b"\x52\x75\x73\x74 as bytes";
+    // ...但不能使用 Unicode 转义字符
+    // let escaped = b"\u{211D} is not allowed";
+    println!("Some escaped bytes: {:?}", escaped);
+
+    let raw_bytestring = br"\u{211D} is not escaped here";
+    println!("{:?}", raw_bytestring);
+    
+    let collecte_iterator: Vec<i32> = (0..10).collect();
+    println!("Collected (0..10) into: {:?}", collecte_iterator);
+
+    let mut xs = vec![1i32, 2, 3];
+    println!("Initial vector: {:?}", xs);
+
+    println!("push 4 into the vector");
+    xs.push(4);
+    println!("vector: {:?} ", xs);
+    //collecte_iterator.push(0);
+
+     println!("Vector size: {}", xs.len());
+
+    println!("Second element: {}", xs[1]);
+
+    println!("Pop last element: {:?}", xs.pop());
+    //println!("Fourth element: {}", xs[3]);
+
+    println!("Contents of xs: ");
+    for x in xs.iter() {
+        println!("> {}", x);
+    }
+    for (i, x) in xs.iter().enumerate() {
+        println!("In position {} we have value {}", i, x);
+    }
+
+    for x in xs.iter_mut() {
+        *x *= 3;
+    }
+    println!("Updated vector: {:?}", xs);
+
+}   
