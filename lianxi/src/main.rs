@@ -3,6 +3,7 @@ use crate::examples::struct_enum_const::Point;
 use crate::examples::struct_enum_const::Rectangle;
 
 mod examples;
+mod struct;
 mod fn_ownership;
 mod generic_in_rust;
 mod guess_num;
