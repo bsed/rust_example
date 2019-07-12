@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7897b1fd-8d02-4c46-8362-eaf2bb65d934" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../generics/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../generics/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/1eeztdt3ndmyd8tn.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/1nldruuibkyg2kdt.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/1od18c6bkmtnps8.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/1z6nb0s6kntcgvtn.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/23ilw1esr984m02x.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/249p7987q2myij7x.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/27slfnf8qpgxdmfr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/2e1toujtlqx6ozjf.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/2f5sy9fohsyjtwjv.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/2hbmn4tm8jhom6kb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/2jku9bd9tfvqvz95.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/332fz5yxl7wgsn1n.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/352nlb01wufdozqz.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/37pteugnv0oft37v.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/3l3i2yizczco1ht6.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/3lh61lzlmjbpgl9c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/3rs5dn7y5r4hyskz.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/45s9nyktdeqilpjf.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/4g8ma18hpgmf5y22.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/4gkdtw1dyrzxye9b.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/5a59pflq45sba2wy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/5bp3wx9sjny1rqxg.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/5d5a6yaqt314ftko.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/8itee877jz6byes.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/rrl8ut43j3lfvdb.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/x55rcgw7i5fzbaz.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd-working/yfhv04bimgcel76.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/debug/incremental/generics-12hgion2dojy5/s-fdunop3vee-v4nsrd.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/deps/save-analysis/generics-bed631eb7c1eccce.json" beforeDir="false" afterPath="$PROJECT_DIR$/../generics/target/rls/debug/deps/save-analysis/generics-bed631eb7c1eccce.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/deps/save-analysis/generics-bf623c523c79bbde.json" beforeDir="false" afterPath="$PROJECT_DIR$/../generics/target/rls/debug/deps/save-analysis/generics-bf623c523c79bbde.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/incremental/generics-p8p5le0jeojl/s-fdunotr6eh-jgqah-117dnyjo28o8o/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/incremental/generics-p8p5le0jeojl/s-fdunotr6eh-jgqah-117dnyjo28o8o/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/incremental/generics-p8p5le0jeojl/s-fdunotr6eh-jgqah-117dnyjo28o8o/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/incremental/generics-p8p5le0jeojl/s-fdunotr6eh-jgqah.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/incremental/generics-yojwl8qzvrt1/s-fdunott4bv-16shqsx-mwyhhj6ghfkz/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/incremental/generics-yojwl8qzvrt1/s-fdunott4bv-16shqsx-mwyhhj6ghfkz/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/incremental/generics-yojwl8qzvrt1/s-fdunott4bv-16shqsx-mwyhhj6ghfkz/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../generics/target/rls/debug/incremental/generics-yojwl8qzvrt1/s-fdunott4bv-16shqsx.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../macros/target/rls/debug/incremental/macros-2kyfp8athona0/s-fdsmyl714w-1tyrl4e-25hognzcl0ep/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../macros/target/rls/debug/incremental/macros-2kyfp8athona0/s-fdsmyl714w-1tyrl4e-25hognzcl0ep/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../macros/target/rls/debug/incremental/macros-2kyfp8athona0/s-fdsmyl714w-1tyrl4e-25hognzcl0ep/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../macros/target/rls/debug/incremental/macros-2kyfp8athona0/s-fdsmyl714w-1tyrl4e.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../macros/target/rls/debug/incremental/macros-g6yejpgif8pj/s-fdsmyl4q0x-12wex5m-17nkovdsnu4xz/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../macros/target/rls/debug/incremental/macros-g6yejpgif8pj/s-fdsmyl4q0x-12wex5m-17nkovdsnu4xz/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../macros/target/rls/debug/incremental/macros-g6yejpgif8pj/s-fdsmyl4q0x-12wex5m-17nkovdsnu4xz/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../macros/target/rls/debug/incremental/macros-g6yejpgif8pj/s-fdsmyl4q0x-12wex5m.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../toy-browser" beforeDir="false" afterPath="$PROJECT_DIR$/../toy-browser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../variable_bindings/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/deps/variable_bindings-334ad29d020c3b95.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../variable_bindings/target/debug/deps/variable_bindings-334ad29d020c3b95.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/1cnuaa24xzd49awu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/1op9s376c3468rdu.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/2mjaipxvsym4act9.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/3f8z4rykodrq0q4h.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/3ufnumvlax08q29p.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/497pueapkln5847v.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/4gbdh093bu9hswlv.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt-28t0zwoio0khx/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/incremental/variable_bindings-14b59gpdpj57s/s-fdvraqedw9-gx84pt.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/debug/variable_bindings.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../variable_bindings/target/debug/variable_bindings.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/deps/save-analysis/variable_bindings-2ba5b3264d3697a8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/deps/save-analysis/variable_bindings-2ba5b3264d3697a8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/deps/save-analysis/variable_bindings-a238ce7f78838524.json" beforeDir="false" afterPath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/deps/save-analysis/variable_bindings-a238ce7f78838524.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/incremental/variable_bindings-1j45mxoadq46w/s-fdvraqrhmr-zdyfh8-26b35hrp8ap9j/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/incremental/variable_bindings-1j45mxoadq46w/s-fdvraqrhmr-zdyfh8-26b35hrp8ap9j/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/incremental/variable_bindings-1j45mxoadq46w/s-fdvraqrhmr-zdyfh8-26b35hrp8ap9j/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/incremental/variable_bindings-1j45mxoadq46w/s-fdvraqrhmr-zdyfh8.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/incremental/variable_bindings-23qn3wea3tdyu/s-fdvraqnj94-1a6d2i6-2ok6uo9w2s6x0/dep-graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/incremental/variable_bindings-23qn3wea3tdyu/s-fdvraqnj94-1a6d2i6-2ok6uo9w2s6x0/query-cache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/incremental/variable_bindings-23qn3wea3tdyu/s-fdvraqnj94-1a6d2i6-2ok6uo9w2s6x0/work-products.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../variable_bindings/target/rls/debug/incremental/variable_bindings-23qn3wea3tdyu/s-fdvraqnj94-1a6d2i6.lock" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.rs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.rs" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="DHxxFqCE" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="176" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tokio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tokio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tokio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tokio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.protractor.protractor_package" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="language.rust" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7897b1fd-8d02-4c46-8362-eaf2bb65d934" name="Default Changelist" comment="" />
+      <created>1562660040615</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562660040615</updated>
+      <workItem from="1562660042169" duration="425000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="425000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="176" width="1456" height="876" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11764706" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Cargo" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.rs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

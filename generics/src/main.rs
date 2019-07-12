@@ -122,7 +122,8 @@ impl<T> PrintInOption for T where
         fn print_in_option(self) {
             println!("{:?}", Some(self));
         }
-    }
+}
+
 
 fn main() {
     println!("Hello, world!");
@@ -188,4 +189,6 @@ fn main() {
 
     let vec5 = vec![1, 2, 3];
     vec5.print_in_option();
+
+ 
 }

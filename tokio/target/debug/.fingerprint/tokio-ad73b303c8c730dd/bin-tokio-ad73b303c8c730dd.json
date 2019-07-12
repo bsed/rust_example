@@ -1,0 +1,1 @@
+{"rustc":14339930153574751747,"features":"[]","target":2970807365690282956,"profile":14996655781355331481,"path":1036222786711178230,"deps":[[2844544792705456568,"tokio",false,9420493938697798829]],"local":[{"CheckDepInfo":{"dep_info":".fingerprint\\tokio-ad73b303c8c730dd\\dep-bin-tokio-ad73b303c8c730dd"}}],"rustflags":[],"metadata":1103270788440540279}
