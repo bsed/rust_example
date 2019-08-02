@@ -1,0 +1,1 @@
+C:\workspace\rust\rust_example\modules\target\debug\modules.exe: C:\workspace\rust\rust_example\modules\src\hello.rs C:\workspace\rust\rust_example\modules\src\main.rs C:\workspace\rust\rust_example\modules\src\sub\mod.rs C:\workspace\rust\rust_example\modules\src\sub\module.rs
