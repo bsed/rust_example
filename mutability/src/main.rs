@@ -61,6 +61,6 @@ fn main() {
     //println!("{:?}", bla);
 
     let six = 6;
-    drop(six); // this does not drop six, because primitive types does not implement the Drop trait
+    drop(six); // 
     println!("{}", six); // this works
 }
