@@ -1,0 +1,1 @@
+{"rustc":1721041244746425561,"features":"[]","target":6604729673360055136,"profile":14996655781355331481,"path":1036222786711178230,"deps":[[8764374909478324557,"rand",false,11206142994311346381]],"local":[{"CheckDepInfo":{"dep_info":".fingerprint\\philosophers-33e7c015315c93cf\\dep-bin-philosophers-33e7c015315c93cf"}}],"rustflags":[],"metadata":1103270788440540279}
