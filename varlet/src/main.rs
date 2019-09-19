@@ -22,6 +22,13 @@ fn main() {
 
     let b = plus_one;
     println!("b function ref: {}", plus_three(b, 2)); // b function ref: 4
+
+    let aa = [1, 2, 3]; // a[0] = 1, a[1] = 2, a[2] = 3
+    let mut b = [1, 2, 3];
+    let cc: [i32; 3] = [1, 2, 3]; //[Type; NO of elements]
+    let ee: [i32; 0] = []; //empty array
+    println!("{:?}", aa); //[1, 2, 3]
+    println!("{:#?}", aa);
 }
 
 
