@@ -46,3 +46,4 @@ fn sleep(thread_name: &'static str, min: u64, max: u64) {
     println!("{} sleeping for: {} milliseconds", thread_name, random);
     thread::sleep(time::Duration::from_micros(random));
 }
+
